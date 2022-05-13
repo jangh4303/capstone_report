@@ -14,18 +14,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_Resume"
-            android:exported="false" />
-        <activity
-            android:name=".Resume"
-            android:exported="false" />
-        <activity
-            android:name=".Resume_make"
-            android:exported="false" />
-        <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".Activity_PersonalInfo"
             android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:label="개인정보" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -36,6 +28,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activity_Resume"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
     </application>
 
 </manifest>
