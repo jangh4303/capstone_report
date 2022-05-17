@@ -1,15 +1,13 @@
 package com.example.myapplication.Activity;
 
-import static com.example.myapplication.view.Util.showToast;
+import static com.example.myapplication.Util.showToast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 
 import com.example.myapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;

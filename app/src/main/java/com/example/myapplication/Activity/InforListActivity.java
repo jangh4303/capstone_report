@@ -33,7 +33,7 @@ public class InforListActivity extends BasicActivity {
 
         data.add("로그인");
         data.add("로그아웃");
-        data.add("회원정보 변경");
+        data.add("회원정보");
         data.add("비밀번호 변경");
         data.add("회원가입");
         data.add("개발자");
@@ -51,7 +51,7 @@ public class InforListActivity extends BasicActivity {
                         myStartActivity(LoginActivity.class);
                         break;
                     case 2:
-                        myStartActivity(LoginActivity.class);
+                        myStartActivity(MemberInitActivity.class);
                         break;
                     case 3:
                         myStartActivity(PasswordResetActivity.class);

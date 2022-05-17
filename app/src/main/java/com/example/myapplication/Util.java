@@ -1,4 +1,4 @@
-package com.example.myapplication.view;
+package com.example.myapplication;
 
 import android.app.Activity;
 import android.util.Patterns;

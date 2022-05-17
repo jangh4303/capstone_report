@@ -2,9 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapplication">
-
+    //인터넷 퍼미션
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    //카메라 퍼미션
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +23,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".Activity.GalleryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MemberInitActivity"
+            android:exported="false" />
         <activity
             android:name=".Activity.PasswordResetActivity"
             android:exported="false" />
