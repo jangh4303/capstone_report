@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 
 import static com.example.myapplication.view.Util.showToast;
 
@@ -11,13 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
+import com.example.myapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BasicActivity {
 
         private FirebaseAuth mAuth;
 
@@ -43,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                         break;
                     case R.id.gotoPasswordResetButton:
                         
-                       // myStartActivity(PasswordResetActivity.class);
+                        myStartActivity(PasswordResetActivity.class);
 
                         break;
                 }
@@ -56,15 +57,15 @@ public class LoginActivity extends AppCompatActivity {
 
             if (email.length() > 0 && password.length() > 0) {
 
-               // final RelativeLayout loaderLayout = findViewById(R.id.loaderLyaout);
-               // loaderLayout.setVisibility(View.VISIBLE);
+              //  final RelativeLayout loaderLayout = findViewById(R.id.loaderLyaout);
+              //  loaderLayout.setVisibility(View.VISIBLE);
 
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                             //   loaderLayout.setVisibility(View.GONE);
+                               // loaderLayout.setVisibility(View.GONE);
 
                                 if (task.isSuccessful()) {
                                     FirebaseUser user = mAuth.getCurrentUser();

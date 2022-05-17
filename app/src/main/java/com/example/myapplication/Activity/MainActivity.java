@@ -1,10 +1,10 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.myapplication.databinding.ActivityPersonalInfoBinding;
+import com.example.myapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +14,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
-import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BasicActivity {
 
     private ActivityMainBinding binding;
 
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         binding.floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+                Intent intent = new Intent(getApplicationContext(), InforListActivity.class);
                 startActivity(intent);
             }
         });

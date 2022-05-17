@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myapplication.Activity_Resume;
+import com.example.myapplication.Activity.Activity_Resume;
 import com.example.myapplication.databinding.FragmentResumeBinding;
 
 public class ResumeFragment extends Fragment {

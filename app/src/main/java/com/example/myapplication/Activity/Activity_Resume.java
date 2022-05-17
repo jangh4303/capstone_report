@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-public class Activity_Resume extends AppCompatActivity {
+import com.example.myapplication.R;
+
+public class Activity_Resume extends BasicActivity {
 
     private EditText Title, Name, Grade, Old, Department_number, Department, hobby, speciality;
     private CheckBox Check1, Check2,Check3,Check4,Check5,Check6;

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Activity;
 
 import static com.example.myapplication.view.Util.showToast;
 
@@ -11,13 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
+import com.example.myapplication.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends BasicActivity {
     private FirebaseAuth mAuth;
 
     @Override
@@ -33,13 +34,13 @@ public class SignUpActivity extends AppCompatActivity {
         findViewById(R.id.gotoLoginButton).setOnClickListener(onClickListener);
     }
 
-    @Override
+   /* @Override
     public void onBackPressed() {
         super.onBackPressed();
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
-    }
+    }*/
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -62,8 +63,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         if(email.length() > 0 && password.length() > 0 && passwordCheck.length() > 0){
             if(password.equals(passwordCheck)){
-              //  final RelativeLayout loaderLayout = findViewById(R.id.loaderLyaout);
-             //   loaderLayout.setVisibility(View.VISIBLE);
+                final RelativeLayout loaderLayout = findViewById(R.id.loaderLyaout);
+                loaderLayout.setVisibility(View.VISIBLE);
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
